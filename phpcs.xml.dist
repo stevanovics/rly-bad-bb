@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         name="Really Bad BB Coding Standard"
+         xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
+
+    <description>PSR-12 coding standard for the application.</description>
+
+    <!-- Directories to check -->
+    <file>src</file>
+    <file>public</file>
+
+    <!-- Directories / patterns to ignore -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/docker/*</exclude-pattern>
+    <exclude-pattern>*/cache/*</exclude-pattern>
+
+    <!-- Arguments & Formatting -->
+    <arg value="ps"/>
+    <arg name="colors"/>
+    <arg name="parallel" value="8"/>
+    <arg name="extensions" value="php"/>
+    <arg name="encoding" value="utf-8"/>
+
+    <!-- Base standard: PSR-12 -->
+    <rule ref="PSR12"/>
+
+    <!--
+      PSR-1 forbids mixing symbol declarations with side-effect execution.
+      Entry scripts (like public/index.php) inherently execute side effects,
+      so we exclude index.php from this specific sniff.
+    -->
+    <rule ref="PSR1.Files.SideEffects">
+        <exclude-pattern>public/index.php</exclude-pattern>
+    </rule>
+
+</ruleset>
