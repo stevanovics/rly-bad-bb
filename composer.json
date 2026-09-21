@@ -7,5 +7,10 @@
         "cs-check": "phpcs",
         "cs-fix": "phpcbf",
         "stan": "phpstan analyse"
+    },
+    "autoload": {
+        "psr-4": {
+            "RlyBadBB\\": "src/"
+        }
     }
 }
