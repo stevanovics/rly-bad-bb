@@ -1,0 +1,15 @@
+parameters:
+    level: 10
+
+    paths:
+        - src
+        - public
+
+    tmpDir: .phpstan.cache
+
+    # Treat PHPDoc types with a slight grain of salt when runtime checks exist
+    # (prevents false-positives if a DocBlock doesn't perfectly match runtime reality)
+    treatPhpDocTypesAsCertain: false
+
+    # Report unhandled match/switch expressions or dead code
+    reportUnmatchedIgnoredErrors: true
