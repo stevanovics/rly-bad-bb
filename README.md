@@ -1,6 +1,6 @@
 # Rly Bad BB
 
-A really bad no dependencies Bulletin Board implementation in PHP.
+A really bad Bulletin Board implementation in PHP.
 
 ---
 

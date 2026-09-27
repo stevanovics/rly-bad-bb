@@ -12,5 +12,10 @@
         "psr-4": {
             "RlyBadBB\\": "src/"
         }
+    },
+    "require": {
+        "nyholm/psr7": "^1.8",
+        "nyholm/psr7-server": "^1.1",
+        "laminas/laminas-httphandlerrunner": "^2.14"
     }
 }

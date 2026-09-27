@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace RlyBadBB\Controllers;
 
+use RlyBadBB\Http\Response;
+
 class HomeController
 {
-    public function index(): void
+    public function index(): Response
     {
-        echo 'Hello World.';
+        return (Response::fromData('Hello World'));
     }
 }

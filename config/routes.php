@@ -1,5 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
+use RlyBadBB\Controllers\HomeController;
+
 return [
-    '/'     => ['HomeController', 'index', 'GET'],
+    'GET' => [
+        '/' => [HomeController::class, 'index'],
+    ],
 ];
