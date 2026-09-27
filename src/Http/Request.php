@@ -9,8 +9,8 @@ use Nyholm\Psr7Server\ServerRequestCreator;
 use Psr\Http\Message\ServerRequestInterface;
 
 /**
-* Adapter for PSR-7 ServerRequestInterface.
-*/
+ * Adapter for PSR-7 ServerRequestInterface.
+ */
 class Request
 {
     /**
@@ -36,20 +36,20 @@ class Request
     }
 
     /**
-    * Retreives the HTTP method of the request.
-    *
-    * @return string HTTP method of the request.
-    */
+     * Retreives the HTTP method of the request.
+     *
+     * @return string HTTP method of the request.
+     */
     public function method(): string
     {
         return $this->request->getMethod();
     }
 
     /**
-    * Retreives the path component of the request URI.
-    *
-    * @return string The URI path.
-    */
+     * Retreives the path component of the request URI.
+     *
+     * @return string The URI path.
+     */
     public function path(): string
     {
         return $this->request->getUri()->getPath();
