@@ -23,8 +23,7 @@ class Response
     }
 
     /**
-     *  Create a standard text/html response. Overwrites Content-Type
-     *  header to always be text/html.
+     *  Create a standard text/html response.
      *
      *  @param string $body Reponse body.
      *  @param int $code Response code.
