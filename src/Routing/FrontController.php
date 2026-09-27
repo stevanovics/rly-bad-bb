@@ -6,13 +6,24 @@ namespace RlyBadBB\Routing;
 
 use RlyBadBB\Http\Request;
 use RlyBadBB\Http\Response;
+use Stringable;
 
 class FrontController
 {
+    /**
+     * Construct front controller.
+     * @param Router $router Router.
+     * @param Request $request HTTP $request.
+     */
     public function __construct(private Router $router, private Request $request)
     {
     }
 
+    /**
+     * Return appropriate response depending on the route.
+     *
+     * @return Response
+     */
     public function resolve(): Response
     {
         $route = $this->router->match($this->request);
@@ -35,12 +46,13 @@ class FrontController
             return Response::genericServerError();
         }
 
+        /** @var Response|Stringable */
         $response = $controller->$action($this->request);
 
         if ($response instanceof Response) {
             return $response;
         }
 
-        return Response::text((string) $response);
+        return Response::html((string) $response);
     }
 }
