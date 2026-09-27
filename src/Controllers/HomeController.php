@@ -10,6 +10,6 @@ class HomeController
 {
     public function index(): Response
     {
-        return (Response::fromData('Hello World'));
+        return (Response::text('Hello World'));
     }
 }
