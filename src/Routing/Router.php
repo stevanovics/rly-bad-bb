@@ -22,10 +22,10 @@ class Router
      *
      * @param Request $request The HTTP request.
      *
-     * @return array<int, string>|null First element is the controller class, second is the method on it.
-     * Null is returned if no rute has been matched.
+     * @return array<int, mixed>|callable|null If array first element is the controller class, second is the action.
+     *     Null is returned if no rute has been matched.
      */
-    public function match(Request $request): array|null
+    public function match(Request $request): array|callable|null
     {
         return $this->routes[$request->method()][$request->path()] ?? null;
     }

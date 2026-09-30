@@ -13,8 +13,8 @@ $routes = require __DIR__ . '/../config/routes.php';
 
 $router = new Router($routes);
 $dispatcher = new Dispatcher();
+$app = new FrontController($router, $dispatcher);
 
 $request = Request::fromGlobals();
-$app = new FrontController($router, $request, $dispatcher);
 
-(new SapiEmitter())->emit($app->resolve()->toPsr7());
+(new SapiEmitter())->emit($app->resolve($request)->toPsr7());
