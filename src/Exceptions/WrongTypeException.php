@@ -22,9 +22,9 @@ final class WrongTypeException extends AppException
         ?Throwable $previous = null,
     ) {
         parent::__construct(
-            message: $message,
-            code: $code,
-            previous: $previous,
+            $message,
+            $code,
+            $previous,
         );
     }
 

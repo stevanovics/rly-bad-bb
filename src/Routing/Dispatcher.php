@@ -47,9 +47,9 @@ class Dispatcher
         }
 
         throw WrongTypeException::forMultipleTypes(
-            variable: '$response',
-            actualType: gettype($response),
-            expectedTypes: [Response::class, 'string'],
+            '$response',
+            gettype($response),
+            [Response::class, 'string'],
         );
     }
 
@@ -65,26 +65,26 @@ class Dispatcher
 
         if (! is_string($controller)) {
             throw WrongTypeException::forString(
-                variable: '$controller',
-                actualType: gettype($controller),
+                '$controller',
+                gettype($controller),
             );
         }
 
         if (class_exists($controller)) {
             $controller = new $controller();
         } else {
-            throw ControllerNotFoundException::forClass(class: $controller);
+            throw ControllerNotFoundException::forClass($controller);
         }
 
         if (! is_string($action)) {
             throw WrongTypeException::forString(
-                variable: '$controller',
-                actualType: gettype($action),
+                '$controller',
+                gettype($action),
             );
         }
 
         if (! method_exists($controller, $action)) {
-            throw ActionNotFoundException::forAction(action: $action, class: $controller::class);
+            throw ActionNotFoundException::forAction($action, $controller::class);
         }
 
         /** @var Response|Stringable */
