@@ -15,7 +15,7 @@ final class ActionNotFoundException extends AppException
         int $code = 404,
         Throwable|null $previous = null,
     ) {
-        return parent::__construct(
+        parent::__construct(
             $message,
             $code,
             $previous,

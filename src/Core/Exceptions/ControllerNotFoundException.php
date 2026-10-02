@@ -14,7 +14,7 @@ final class ControllerNotFoundException extends AppException
         int $code = 0,
         Throwable|null $previous = null,
     ) {
-        return parent::__construct(
+        parent::__construct(
             $message,
             $code,
             $previous,
