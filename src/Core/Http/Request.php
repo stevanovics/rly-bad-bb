@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace RlyBadBB\Http;
+namespace RlyBadBB\Core\Http;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
 use Nyholm\Psr7Server\ServerRequestCreator;

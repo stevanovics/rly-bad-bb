@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace RlyBadBB\Routing;
+namespace RlyBadBB\Core\Routing;
 
-use RlyBadBB\Http\Request;
-use RlyBadBB\Http\Response;
+use RlyBadBB\Core\Http\Request;
+use RlyBadBB\Core\Http\Response;
 use Throwable;
 
 class FrontController

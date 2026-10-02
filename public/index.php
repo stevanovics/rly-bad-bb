@@ -1,10 +1,10 @@
 <?php
 
 use Laminas\HttpHandlerRunner\Emitter\SapiEmitter;
-use RlyBadBB\Http\Request;
-use RlyBadBB\Routing\Dispatcher;
-use RlyBadBB\Routing\FrontController;
-use RlyBadBB\Routing\Router;
+use RlyBadBB\Core\Http\Request;
+use RlyBadBB\Core\Routing\Dispatcher;
+use RlyBadBB\Core\Routing\FrontController;
+use RlyBadBB\Core\Routing\Router;
 
 require __DIR__ . '/../vendor/autoload.php';
 

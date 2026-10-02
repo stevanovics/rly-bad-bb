@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace RlyBadBB\Controllers;
 
-use RlyBadBB\Http\Response;
+use RlyBadBB\Core\Http\Response;
 
 class HomeController
 {
